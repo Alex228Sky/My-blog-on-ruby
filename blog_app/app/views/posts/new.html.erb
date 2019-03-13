@@ -1,0 +1,16 @@
+
+    <h1>Добавление поста</h1>
+    <%= form_for :posts, url: posts_path do |f| %>
+    <p>
+      Название
+      <%= f.text_field(:title, {:class => 'form-control'} )%>
+    </p>
+    <p>
+      Текст
+      <%= f.text_area(:body, {:class => 'form-control'}) %>
+    </p>
+    <p>
+
+      <%= f.submit({:class => 'btn btn-success'}) %>
+    </p>
+    <% end %>
